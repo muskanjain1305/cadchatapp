@@ -1,0 +1,14 @@
+<script src="js/socket.io.js.js"></script>
+
+<script>
+    var server = "http://localhost:3000";
+    try{
+    var io = io(server);
+    }
+    catch(err){
+        console.log("Error")
+    }
+    // sending message from client
+    console.log("Hey working fine")
+    io.emit("new_message", "Hello Server");
+</script>
